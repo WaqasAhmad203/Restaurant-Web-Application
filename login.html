@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/input.css">
+    <title>Document</title>
+</head>
+
+<body class="bg-zinc-900">
+    <div class="navbar bg-black h-24 z-50">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <label tabindex="0" class="btn btn-ghost lg:hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+              </svg>
+            </label>
+            <ul tabindex="0"
+              class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-black rounded-box w-52 font-semibold ">
+              <li><a href="index.html" class="hover:text-red-700 text-white">Home</a></li>
+              <li>
+                <a href="Menu.html" class="hover:text-red-700 text-white">Menu</a>
+              </li>
+              <li><a href="Blog.html" class="hover:text-red-700 text-white">Blog</a></li>
+              <li><a href="Aboutus.html" class="hover:text-red-700 text-white">About us</a></li>
+            </ul>
+          </div>
+          <a href><img src="images/logo.png" class="h-24 w-auto" alt></a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1 font-semibold text-2xl">
+            <li><a href="index.html" class="hover:text-red-700 text-white">Home</a></li>
+            <li><a href="Menu.html" class="hover:text-red-700 text-white">Menu</a></li>
+            <li><a href="Blog.html" class="hover:text-red-700 text-white">Blog</a></li>
+            <li><a href="Aboutus.html" class="hover:text-red-700 text-white">About us</a></li>
+          </ul>
+        </div>
+        <div class="navbar-end">
+          <a href="" class="btn text-white bg-red-700 flex items-center mr-4 border-none hover:bg-black">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+            </svg>
+            Cart
+          </a>
+          <a href="login.html" class="btn text-white border-none bg-red-700 hover:bg-black">Login</a>
+        </div>
+      </div>
+
+    <div class="m-auto">
+        <div class="flex flex-col items-center justify-center h-screen">
+            <div id="auth-form"
+                class="w-full max-w-md bg-gray-300 text-white border-2 border-red-700 rounded-lg shadow-md p-6">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4 text-center">Login</h2>
+                <form class="flex flex-col" id="login-form">
+                    <input type="email"
+                        class="bg-gray-100 text-gray-900 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-red-700 transition ease-in-out duration-150"
+                        placeholder="Email address">
+                    <input type="password"
+                        class="bg-gray-100 text-gray-900 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-red-700 transition ease-in-out duration-150"
+                        placeholder="Password">
+                    <button type="submit" class="btn text-white border-none bg-red-700 hover:bg-black">Login</button>
+                </form>
+
+                <form class="hidden flex-col" id="signup-form">
+                    <input type="text" id="first-name"
+                        class="bg-gray-100 text-gray-900 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-red-700 transition ease-in-out duration-150"
+                        placeholder="First Name">
+                    <input type="text" id="last-name"
+                        class="bg-gray-100 text-gray-900 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-red-700 transition ease-in-out duration-150"
+                        placeholder="Last Name">
+                    <input type="email" id="email"
+                        class="bg-gray-100 text-gray-900 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-red-700 transition ease-in-out duration-150"
+                        placeholder="Email address">
+                    <input type="password" id="password"
+                        class="bg-gray-100 text-gray-900 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-red-700 transition ease-in-out duration-150"
+                        placeholder="Password">
+                    <input type="password" id="confirm-password"
+                        class="bg-gray-100 text-gray-900 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-red-700 transition ease-in-out duration-150"
+                        placeholder="Confirm Password">
+                    <button type="submit" id="signup-form-submit" class="btn text-white border-none bg-red-700 hover:bg-black">Signup</button>
+                    
+                </form>
+
+                <div class="flex items-center justify-between flex-wrap">
+                    <label id="label-remeber-me" for="remember-me" class="text-sm text-gray-900 cursor-pointer">
+                        <input type="checkbox" id="remember-me" class="mr-2">
+                        Remember me
+                    </label>
+                    <a href="#" class="text-sm text-red-700 hover:underline mb-0.5" id="forgot-password-link">Forgot
+                        password?</a>
+                    <p id="form-text" class="text-gray-900 my-4 m-auto"> Don't have an account? <a href="#"
+                            class="text-sm text-red-700 -200 hover:underline mt-4" id="toggle-form-link">Signup</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="login.js"></script>
+</body>
+
+
+</html>
